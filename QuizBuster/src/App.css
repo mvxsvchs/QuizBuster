@@ -1,24 +1,99 @@
+/* Allgemeine Layout-Einstellungen */
 #root {
-  max-width: 1920px;
+  max-width: 1200px; /* Kleinere max-width für bessere Lesbarkeit */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  min-height: 100vh;
+  background-color: #f9f9f9; /* Helles neutrales Hintergrund */
 }
 
+body {
+  background-color: #f9f9f9; /* Helles Hintergrund für den Body */
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: #333333; /* Dunkles Grau für den Text */
+}
+
+/* Überschrift */
+h1 {
+  color: #333333; /* Dunkles Grau für den Titel */
+  font-size: 2.5rem;
+  margin: 0 0 0 10px; /* kleiner linker Abstand */
+}
+
+/* Sticky Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff; /* Weiß für den Header */
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0; /* Leichter Trennstrich unten */
+}
+
+/* Container für Logo, Titel und Navigation */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Logo links, Navigation rechts */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo-Bereich links */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo (jetzt kleiner) */
 .logo {
-  height: 16em;
-  padding: 1.5em;
+  height: 60px; /* Angepasste kleinere Größe */
+  padding: 0.5em;
   will-change: filter;
   transition: filter 100ms;
-  border-radius: 64px;
+  border-radius: 8px; /* Abgerundete Ecken für das Logo */
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 1.5em #85a5ff);
+  filter: drop-shadow(0 0 1.5em #007bff); /* Blauer Hover-Effekt */
 }
-body {
-  background-color: #2e294e;
+
+/* Navigation */
+.nav {
+  /* Die Navigation wird automatisch rechts ausgerichtet */
 }
-h1 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  color: #d5ffff;
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Weniger Abstand zwischen den Buttons */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-button {
+  padding: 10px 20px; /* Kleinere Buttons für mehr Eleganz */
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #007bff; /* Sanftes Blau für die Buttons */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Dunkleres Blau beim Hover */
+  transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+.nav-button:active {
+  background-color: #003f7d; /* Noch dunkleres Blau bei Klick */
 }
