@@ -1,0 +1,24 @@
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 16em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 100ms;
+  border-radius: 64px;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em #85a5ff);
+}
+body {
+  background-color: #2e294e;
+}
+h1 {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  color: #d5ffff;
+}
