@@ -1,0 +1,69 @@
+/* Allgemeine Container-Einstellungen */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333; /* Sanftes Grau für den Text */
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Helles, neutrales Hintergrund */
+    border-radius: 8px;
+}
+
+/* Überschrift (H2) Styling */
+.title {
+    font-size: 2.5rem;
+    color: #333333; /* Dunkelgrau für den Titel, um den Kontrast zu reduzieren */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Beschreibender Text */
+.description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555555; /* Helles Grau für den beschreibenden Text */
+    margin-bottom: 2rem;
+}
+
+/* Subheading Styling */
+.subheading {
+    font-size: 1.4rem;
+    color: #666666; /* Ein weiches Grau für die Subheadings */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Schritt-für-Schritt Listenelemente */
+.step {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    padding: 10px;
+    background-color: #ffffff; /* Weißer Hintergrund für die Schritte */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* Heller Rahmen um die Schritte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sanfte Schatten für mehr Tiefe */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step:hover {
+    background-color: #fafafa; /* Sehr leicht abgedunkelt beim Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+}
+
+/* Styling für das Ergebnis (Sieg oder Niederlage) */
+.outcome {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007bff; /* Ein beruhigendes Blau als Akzentfarbe */
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Finale Beschreibung */
+.finale {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #777777; /* Ein sehr helles Grau für die finale Beschreibung */
+    margin-top: 1rem;
+}
