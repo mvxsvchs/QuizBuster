@@ -1,8 +1,5 @@
 /* Allgemeine Layout-Einstellungen */
 #root {
-  max-width: 1200px; /* Kleinere max-width für bessere Lesbarkeit */
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   min-height: 100vh;
   background-color: #f9f9f9; /* Helles neutrales Hintergrund */
@@ -21,6 +18,9 @@ h1 {
   font-size: 2.5rem;
   margin: 0 0 0 10px; /* kleiner linker Abstand */
 }
+.App {
+  min-width: 100vw;
+}
 
 /* Sticky Header */
 .header {
@@ -29,19 +29,18 @@ h1 {
   z-index: 100;
   background-color: #ffffff; /* Weiß für den Header */
   padding: 10px 20px;
-  border-bottom: 1px solid #e0e0e0; /* Leichter Trennstrich unten */
+  border-bottom: 1px solid #e0e0e0;
+
 }
 
 /* Container für Logo, Titel und Navigation */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* Logo links, Navigation rechts */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+
 }
 
-/* Logo-Bereich links */
 .logo-container {
   display: flex;
   align-items: center;
@@ -60,25 +59,27 @@ h1 {
   filter: drop-shadow(0 0 1.5em #007bff); /* Blauer Hover-Effekt */
 }
 
-/* Navigation */
 .nav {
-  /* Die Navigation wird automatisch rechts ausgerichtet */
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1; /* Stellt sicher, dass der Raum gleichmäßig verteilt wird */
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
-  gap: 20px; /* Weniger Abstand zwischen den Buttons */
+  justify-content: flex-end;
+  gap: 20px; /* Abstand zwischen den Buttons */
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%; /* Breite der Links soll 100% sein */
 }
 
 .nav-button {
-  padding: 10px 20px; /* Kleinere Buttons für mehr Eleganz */
+  padding: 10px 20px;
   font-size: 16px;
   color: #ffffff;
-  background-color: #007bff; /* Sanftes Blau für die Buttons */
+  background-color: #007bff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -86,8 +87,8 @@ h1 {
 }
 
 .nav-button:hover {
-  background-color: #0056b3; /* Dunkleres Blau beim Hover */
-  transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .nav-button:focus {
@@ -95,15 +96,14 @@ h1 {
 }
 
 .nav-button:active {
-  background-color: #003f7d; /* Noch dunkleres Blau bei Klick */
+  background-color: #003f7d;
 }
 
-/* === AUTH FORM === */
 .auth-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
-  background: #ffffff; /* Weiß wie der Header */
+  background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
