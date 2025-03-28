@@ -28,7 +28,7 @@ const Login: React.FC<Props> = ({ onLogin }) => {
             <h2>Login</h2>
             <input placeholder="E-Mail" value={email} onChange={e => setEmail(e.target.value)} /><br />
             <input type="password" placeholder="Passwort" value={password} onChange={e => setPassword(e.target.value)} /><br />
-            <button onClick={handleLogin}>Login</button>
+            <button onClick={handleLogin}>Einloggen</button>
             {error && <p className="error">{error}</p>}
             <p><Link to="/forgot-password">Passwort vergessen?</Link></p>
         </div>
