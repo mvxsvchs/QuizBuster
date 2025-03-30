@@ -1,69 +1,126 @@
 /* Allgemeine Container-Einstellungen */
 .game-container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     font-family: 'Montserrat', sans-serif;
-    color: #333333; /* Sanftes Grau für den Text */
+    color: #333333;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Helles, neutrales Hintergrund */
+    background-color: rgba(249, 249, 249, 0.19);
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Überschrift (H2) Styling */
+/* Überschrift */
 .title {
-    font-size: 2.5rem;
-    color: #333333; /* Dunkelgrau für den Titel, um den Kontrast zu reduzieren */
-    text-align: center;
+    font-size: 2rem;
+    color: #333333;
     margin-bottom: 1rem;
 }
 
-/* Beschreibender Text */
+/* Beschreibung */
 .description {
     font-size: 1.2rem;
-    text-align: center;
-    color: #555555; /* Helles Grau für den beschreibenden Text */
-    margin-bottom: 2rem;
+    color: #555555;
+    margin-bottom: 1rem;
 }
 
-/* Subheading Styling */
+/* Unterüberschrift */
 .subheading {
     font-size: 1.4rem;
-    color: #666666; /* Ein weiches Grau für die Subheadings */
+    color: #666666;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-/* Schritt-für-Schritt Listenelemente */
+/* Kategorie-Buttons */
 .step {
     font-size: 1.1rem;
-    margin: 0.8rem 0;
-    padding: 10px;
-    background-color: #ffffff; /* Weißer Hintergrund für die Schritte */
+    margin: 0.5rem;
+    padding: 10px 15px;
+    background-color: #3498db;  /* Blaue Hintergrundfarbe */
+    color: white;               /* Weiße Schrift */
     border-radius: 8px;
-    border: 1px solid #e0e0e0; /* Heller Rahmen um die Schritte */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sanfte Schatten für mehr Tiefe */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
+/* Hover-Effekt für Kategorie-Buttons */
 .step:hover {
-    background-color: #fafafa; /* Sehr leicht abgedunkelt beim Hover */
-    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+    background-color: #2980b9;  /* Dunkleres Blau beim Hover */
+    transform: translateY(-2px);
 }
 
-/* Styling für das Ergebnis (Sieg oder Niederlage) */
-.outcome {
-    font-size: 1.3rem;
+/* Timer Anzeige */
+.timer {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff; /* Ein beruhigendes Blau als Akzentfarbe */
-    margin-top: 2rem;
-    text-align: center;
+    color: #ff5733;
+    margin-bottom: 1rem;
 }
 
-/* Finale Beschreibung */
-.finale {
-    font-size: 1.2rem;
-    text-align: center;
-    color: #777777; /* Ein sehr helles Grau für die finale Beschreibung */
-    margin-top: 1rem;
+/* Fragen Container */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.options button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;  /* Heller Hintergrund für Antworten */
+    color: #333;  /* Dunkle Schriftfarbe */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-Effekt für Antwort-Buttons */
+.options button:hover {
+    background-color: #e0e0e0; /* Etwas dunklerer Hover-Effekt */
+}
+
+/* Korrekte und falsche Antworten */
+.correct {
+    background-color: #4CAF50 !important;  /* Grüne Hintergrundfarbe */
+    color: white;
+    border-color: #388E3C;
+    animation: blink 0.3s ease-in-out;
+}
+
+.wrong {
+    background-color: #FF5733 !important;  /* Rote Hintergrundfarbe */
+    color: white;
+    border-color: #C0392B;
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Animationen für Blink- und Shake-Effekt */
+@keyframes blink {
+    50% {
+        background-color: #66BB6A;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
 }
