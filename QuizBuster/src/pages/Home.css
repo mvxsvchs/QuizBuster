@@ -1,0 +1,63 @@
+/* === Hauptcontainer der Startseite === */
+.home {
+    display: flex; /* Flexbox-Layout */
+    flex-direction: column; /* Elemente untereinander anordnen */
+    align-items: center; /* Horizontal zentrieren */
+    justify-content: flex-start; /* Oben ausrichten */
+    padding: 40px 20px; /* Innenabstand */
+    height: auto;
+    margin: 164px; /* Abstand zur Außenkante (z. B. vom Header) */
+    background-color: #f4f9fc; /* Hellblauer Hintergrund */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderne, lesbare Schrift */
+    text-align: center; /* Text zentrieren */
+}
+
+/* === Überschrift === */
+.home h1 {
+    font-size: 2.5rem; /* Große Schrift */
+    margin-bottom: 20px;
+    color: #2c3e50; /* Dunkelblau */
+}
+
+/* === Einleitungstext === */
+.home p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555; /* Grauer Ton */
+    max-width: 500px; /* Lesbarkeit auf großen Bildschirmen */
+}
+
+/* === Button-Container (Login & Registrierung) === */
+.button-group {
+    display: flex;
+    gap: 20px; /* Abstand zwischen Buttons */
+    justify-content: center; /* Zentrieren */
+    flex-wrap: wrap; /* Bei kleineren Bildschirmen umbrechen */
+    width: 100%;
+    max-width: 500px;
+}
+
+/* === Links im Button-Container === */
+.button-group a {
+    flex: 1 1 40%; /* Flexibles Wachstum, zwei Buttons pro Zeile */
+    text-decoration: none; /* Unterstreichung entfernen */
+}
+
+/* === Gemeinsamer Button-Stil === */
+.button-group button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px; /* Runde Ecken */
+    font-size: 1.1rem;
+    cursor: pointer; /* Hand-Cursor beim Hover */
+    transition: all 0.2s ease-in-out; /* Weicher Hover-Effekt */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Leichter Schatten */
+    background-color: #007bff; /* Standard-Blau */
+    color: white;
+}
+
+/* === Hover-Effekt für Buttons === */
+.button-group button:hover {
+    background-color: #0056b3; /* Dunkleres Blau beim Hover */
+}

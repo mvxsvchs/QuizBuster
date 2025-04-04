@@ -1,0 +1,157 @@
+/* === Quiz Container === */
+.quiz {
+    max-width: 900px; /* maximale Breite */
+    margin: 8rem auto; /* vertikaler Abstand & zentriert */
+    padding: 2.5rem; /* Innenabstand */
+    background-color: #ffffff; /* weißer Hintergrund */
+    border-radius: 12px; /* abgerundete Ecken */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* leichter Schatten */
+    font-family: Arial, sans-serif; /* einfache, klare Schrift */
+}
+
+/* === Fragebereich === */
+.question-section {
+    margin-bottom: 2rem; /* Abstand nach unten */
+}
+
+.question-category {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555; /* dunkleres Grau */
+}
+
+.question-text {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* === Timer === */
+.timer {
+    position: relative;
+    width: 100%;
+    height: 10px; /* Höhe des Fortschrittsbalkens */
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.timer-bar {
+    height: 100%;
+    background-color: #4caf50; /* grün */
+    transition: width 1s linear; /* flüssige Änderung */
+}
+
+.timer-text {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* === Antwortbereich === */
+.answer-section {
+    display: flex;
+    flex-wrap: wrap; /* mehrere Zeilen bei kleinen Bildschirmen */
+    gap: 1rem; /* Abstand zwischen Buttons */
+}
+
+.answer-button {
+    flex: 1 1 calc(50% - 1rem); /* zwei Buttons pro Zeile */
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Richtige Antwort */
+.answer-button.correct {
+    background-color: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+}
+
+/* Falsche Antwort */
+.answer-button.incorrect {
+    background-color: #f44336;
+    color: #fff;
+    border-color: #f44336;
+}
+
+/* === Punktestand === */
+.score-section {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #e6ffe6; /* leicht grünlich */
+    border: 1px solid #b3ffb3;
+    border-radius: 6px;
+    color: #2d7a2d;
+    margin-top: 2rem;
+}
+
+/* === Ranglisten-Prompt === */
+.leaderboard-prompt {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.leaderboard-prompt input {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.leaderboard-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.leaderboard-prompt button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Speichern-Button */
+.leaderboard-prompt button:first-of-type {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.leaderboard-prompt button:first-of-type:hover {
+    background-color: #0056b3;
+}
+
+/* Abbrechen-Button */
+.leaderboard-prompt button:last-of-type {
+    background-color: #ccc;
+    color: #333;
+}
+
+.leaderboard-prompt button:last-of-type:hover {
+    background-color: #aaa;
+}

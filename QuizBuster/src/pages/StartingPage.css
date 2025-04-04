@@ -1,0 +1,44 @@
+/* Hauptcontainer der Startseite */
+.Startseite {
+    display: flex; /* Flexbox-Layout für vertikale Ausrichtung */
+    flex-direction: column; /* Elemente werden untereinander angeordnet */
+    align-items: center; /* Horizontal zentriert */
+    justify-content: flex-start; /* Oben beginnen statt zentriert */
+    padding: 40px 20px; /* Innenabstand oben/unten 40px, seitlich 20px */
+    height: auto; /* Automatische Höhe basierend auf Inhalt */
+    margin: 164px; /* Außenabstand, z.B. für Abstand zum oberen Rand */
+    background-color: #f4f9fc; /* Heller Hintergrund */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Klare, gut lesbare Schrift */
+    text-align: center; /* Text innerhalb zentrieren */
+}
+
+/* Hauptüberschrift */
+.Startseite h1 {
+    font-size: 2.5rem; /* Große Schrift */
+    color: #333; /* Dunkles Grau für guten Kontrast */
+}
+
+/* Beschreibungstext */
+.Startseite p {
+    font-size: 1.2rem; /* Etwas größer als normaler Text */
+    margin: 1rem 0; /* Vertikaler Abstand */
+    color: #666; /* Mittelgrau für dezente Lesbarkeit */
+}
+
+/* Startbutton Styling */
+.start-button {
+    padding: 1rem 2rem; /* Innenabstand */
+    font-size: 1.2rem; /* Lesbare Schriftgröße */
+    margin-top: 2rem; /* Abstand zum oberen Element */
+    background-color: #007bff; /* Primärfarbe (Blau) */
+    border: none; /* Kein Rahmen */
+    color: #fff; /* Weiße Schrift */
+    border-radius: 8px; /* Abgerundete Ecken */
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
+    transition: background-color 0.3s ease; /* Sanfter Farbwechsel beim Hover */
+}
+
+/* Hover-Effekt für Button */
+.start-button:hover {
+    background-color: #0056b3; /* Dunkleres Blau beim Drüberfahren */
+}
