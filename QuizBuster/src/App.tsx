@@ -23,12 +23,12 @@ function App() {
             {/* Hauptinhalt der Seite, je nach Route */}
             <div className="main-content">
                 <Routes>
-                    <Route path="/" element={<Home />} />                {/* Startseite */}
-                    <Route path="/quiz" element={<QuizGame />} />       {/* Quiz-Spiel */}
+                    <Route path="/" element={<Home />} />                   {/* Startseite */}
+                    <Route path="/quiz" element={<QuizGame />} />           {/* Quiz-Spiel */}
                     <Route path="/leaderboard" element={<Leaderboard />} /> {/* Rangliste */}
-                    <Route path="/login" element={<Login />} />         {/* Login */}
-                    <Route path="/register" element={<Register />} />   {/* Registrierung */}
-                    <Route path="/start" element={<Startseite />} />    {/* Startseite vor dem Quiz */}
+                    <Route path="/login" element={<Login />} />             {/* Login */}
+                    <Route path="/register" element={<Register />} />       {/* Registrierung */}
+                    <Route path="/start" element={<Startseite />} />        {/* Startseite vor dem Quiz */}
                 </Routes>
             </div>
         </Router>

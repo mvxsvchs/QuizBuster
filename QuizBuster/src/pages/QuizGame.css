@@ -155,3 +155,31 @@
 .leaderboard-prompt button:last-of-type:hover {
     background-color: #aaa;
 }
+/* === Kategorieauswahl === */
+.category-select {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-select h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.category-select button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.category-select button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
