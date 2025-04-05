@@ -131,7 +131,7 @@ const QuizGame: React.FC = () => {
             return (
                 <div className="quiz">
                     <div className="score-section">
-                        <p>Du hast {score} von {3 * 3} Fragen richtig beantwortet!</p>
+                        <p>Du hast {score} von 9 Fragen richtig beantwortet!</p>
                     </div>
                 </div>
             );
