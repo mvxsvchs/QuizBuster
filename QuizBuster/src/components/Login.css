@@ -30,7 +30,7 @@
 
 /* Input-Felder */
 .login-input {
-    width: 100%;
+    width: 90%;
     padding: 0.6rem;
     margin-bottom: 1rem;
     border-radius: 0.375rem;
@@ -57,7 +57,7 @@
 
 /* Button */
 .login-button {
-    width: 100%;
+    width: 95%;
     padding: 0.6rem;
     background-color: #3b82f6;
     color: white;

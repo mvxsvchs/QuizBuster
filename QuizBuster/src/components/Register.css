@@ -30,7 +30,7 @@
 
 /* Input-Felder */
 .register-input {
-    width: 100%;
+    width: 90%;
     padding: 0.6rem;
     margin-bottom: 1rem;
     border-radius: 0.375rem;
@@ -81,7 +81,7 @@
 
 /* Button */
 .register-button {
-    width: 100%;
+    width: 95%;
     padding: 0.6rem;
     background-color: #3b82f6; /* blue-500 */
     color: white;
