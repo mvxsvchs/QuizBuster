@@ -1,19 +1,19 @@
+/* === Grundlayout für das gesamte Dokument  === */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* verhindert horizontales Scrollen */
+  width: 100%;
+  min-height: 100%;
+  background-color: #0f172a; /* Dunkler Hintergrund  */
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: #f1f5f9; /* Heller Text (slate-100) */
+}
+
+/* === Hauptcontainer (React Root) === */
 #root {
   min-width: 100vw;         /* ganze Bildschirmbreite */
   text-align: center;       /* Inhalt zentriert ausrichten */
   min-height: 100vh;        /* Ganze Bildschirmhöhe */
-  background-color: #f9f9f9; /* Heller Hintergrund (wird beim Start angezeigt) */
-}
-
-/* === Grundlayout für das gesamte Dokument === */
-html, body {
-  margin: 0;                /* Standard-Außenabstand entfernen */
-  padding: 0;               /* Standard-Innenabstand entfernen */
-  width: 100%;              /* Volle Breite */
-  min-height: 100%;         /* Mindesthöhe auf voller Bildschirmhöhe */
-  background-color: black;  /* Schwarzer Hintergrund als Fallback */
-}
-
-#root {
-  width: 100%;              /* Volle Breite */
+  background-color: #0f172a; /* Konsistent mit Body */
 }

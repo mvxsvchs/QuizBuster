@@ -1,39 +1,40 @@
 /* === Quiz Container === */
 .quiz {
-    max-width: 900px; /* maximale Breite */
-    margin: 8rem auto; /* vertikaler Abstand & zentriert */
-    padding: 2.5rem; /* Innenabstand */
-    background-color: #ffffff; /* weißer Hintergrund */
-    border-radius: 12px; /* abgerundete Ecken */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* leichter Schatten */
-    font-family: Arial, sans-serif; /* einfache, klare Schrift */
+    max-width: 900px;
+    margin: 8rem auto;
+    padding: 2.5rem;
+    background-color: #1e293b; /* slate-800 */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f1f5f9; /* slate-100 */
 }
 
 /* === Fragebereich === */
 .question-section {
-    margin-bottom: 2rem; /* Abstand nach unten */
+    margin-bottom: 2rem;
 }
 
 .question-category {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #555; /* dunkleres Grau */
+    color: #38bdf8; /* sky-400 */
 }
 
 .question-text {
     font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #333;
+    color: #f8fafc;
 }
 
 /* === Timer === */
 .timer {
     position: relative;
     width: 100%;
-    height: 10px; /* Höhe des Fortschrittsbalkens */
-    background-color: #ddd;
+    height: 10px;
+    background-color: #334155; /* slate-700 */
     border-radius: 5px;
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -41,8 +42,8 @@
 
 .timer-bar {
     height: 100%;
-    background-color: #4caf50; /* grün */
-    transition: width 1s linear; /* flüssige Änderung */
+    background-color: #22c55e; /* green-500 */
+    transition: width 1s linear;
 }
 
 .timer-text {
@@ -50,44 +51,45 @@
     top: -28px;
     right: 0;
     font-size: 1rem;
-    color: #333;
+    color: #e2e8f0;
 }
 
 /* === Antwortbereich === */
 .answer-section {
     display: flex;
-    flex-wrap: wrap; /* mehrere Zeilen bei kleinen Bildschirmen */
-    gap: 1rem; /* Abstand zwischen Buttons */
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .answer-button {
-    flex: 1 1 calc(50% - 1rem); /* zwei Buttons pro Zeile */
+    flex: 1 1 calc(50% - 1rem);
     padding: 1.25rem;
     font-size: 1.2rem;
-    border: 1px solid #ccc;
+    border: 1px solid #475569; /* slate-600 */
     border-radius: 6px;
-    background-color: #f9f9f9;
-    color: black;
+    background-color: #0f172a; /* slate-900 */
+    color: #f1f5f9;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .answer-button:hover {
-    background-color: #e0e0e0;
+    background-color: #1e293b;
+    border-color: #38bdf8;
 }
 
 /* Richtige Antwort */
 .answer-button.correct {
-    background-color: #4caf50;
+    background-color: #22c55e;
     color: #fff;
-    border-color: #4caf50;
+    border-color: #22c55e;
 }
 
 /* Falsche Antwort */
 .answer-button.incorrect {
-    background-color: #f44336;
+    background-color: #ef4444;
     color: #fff;
-    border-color: #f44336;
+    border-color: #ef4444;
 }
 
 /* === Punktestand === */
@@ -95,10 +97,10 @@
     font-size: 2rem;
     text-align: center;
     padding: 2rem;
-    background-color: #e6ffe6; /* leicht grünlich */
-    border: 1px solid #b3ffb3;
+    background-color: #14532d; /* dark green background */
+    border: 1px solid #22c55e;
     border-radius: 6px;
-    color: #2d7a2d;
+    color: #bbf7d0; /* green-200 */
     margin-top: 2rem;
 }
 
@@ -106,9 +108,10 @@
 .leaderboard-prompt {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: #f0f0f0;
+    background-color: #1e293b;
     border-radius: 10px;
     text-align: center;
+    color: #e2e8f0;
 }
 
 .leaderboard-prompt input {
@@ -117,8 +120,10 @@
     width: 90%;
     max-width: 400px;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    background-color: #0f172a;
+    border: 1px solid #475569;
     border-radius: 6px;
+    color: #f1f5f9;
 }
 
 .leaderboard-buttons {
@@ -138,23 +143,24 @@
 
 /* Speichern-Button */
 .leaderboard-prompt button:first-of-type {
-    background-color: #007bff;
+    background-color: #3b82f6;
     color: #fff;
 }
 
 .leaderboard-prompt button:first-of-type:hover {
-    background-color: #0056b3;
+    background-color: #2563eb;
 }
 
 /* Abbrechen-Button */
 .leaderboard-prompt button:last-of-type {
-    background-color: #ccc;
-    color: #333;
+    background-color: #64748b; /* slate-500 */
+    color: #e2e8f0;
 }
 
 .leaderboard-prompt button:last-of-type:hover {
-    background-color: #aaa;
+    background-color: #475569; /* slate-600 */
 }
+
 /* === Kategorieauswahl === */
 .category-select {
     text-align: center;
@@ -163,7 +169,7 @@
 
 .category-select h2 {
     font-size: 1.5rem;
-    color: #333;
+    color: #f8fafc;
     margin-bottom: 1.5rem;
 }
 
@@ -171,15 +177,15 @@
     padding: 1rem 2rem;
     font-size: 1.2rem;
     margin: 0.5rem;
-    background-color: #f9f9f9;
-    color: black;
-    border: 1px solid #ccc;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #475569;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .category-select button:hover {
-    background-color: #e0e0e0;
+    background-color: #0f172a;
     transform: translateY(-2px);
 }

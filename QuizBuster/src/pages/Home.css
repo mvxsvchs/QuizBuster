@@ -1,46 +1,46 @@
 /* === Hauptcontainer der Startseite === */
 .home {
-    display: flex; /* Flexbox-Layout */
-    flex-direction: column; /* Elemente untereinander anordnen */
-    align-items: center; /* Horizontal zentrieren */
-    justify-content: flex-start; /* Oben ausrichten */
-    padding: 40px 20px; /* Innenabstand */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
     height: auto;
-    margin: 164px; /* Abstand zur Außenkante (z. B. vom Header) */
-    background-color: #f4f9fc; /* Hellblauer Hintergrund */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Moderne, lesbare Schrift */
-    text-align: center; /* Text zentrieren */
+    margin: 100px 20px; /* etwas weniger Rand für kleinere Screens */
+    background-color: #0f172a; /* Dark Theme Background (slate-900) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 /* === Überschrift === */
 .home h1 {
-    font-size: 2.5rem; /* Große Schrift */
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #2c3e50; /* Dunkelblau */
+    color: #f8fafc; /* Helles Weiß (fast) */
 }
 
 /* === Einleitungstext === */
 .home p {
     font-size: 1.1rem;
     margin-bottom: 40px;
-    color: #555; /* Grauer Ton */
-    max-width: 500px; /* Lesbarkeit auf großen Bildschirmen */
+    color: #cbd5e1; /* slate-300 */
+    max-width: 600px;
 }
 
 /* === Button-Container (Login & Registrierung) === */
 .button-group {
     display: flex;
-    gap: 20px; /* Abstand zwischen Buttons */
-    justify-content: center; /* Zentrieren */
-    flex-wrap: wrap; /* Bei kleineren Bildschirmen umbrechen */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 500px;
 }
 
 /* === Links im Button-Container === */
 .button-group a {
-    flex: 1 1 40%; /* Flexibles Wachstum, zwei Buttons pro Zeile */
-    text-decoration: none; /* Unterstreichung entfernen */
+    flex: 1 1 40%;
+    text-decoration: none;
 }
 
 /* === Gemeinsamer Button-Stil === */
@@ -48,16 +48,18 @@
     width: 100%;
     padding: 16px;
     border: none;
-    border-radius: 12px; /* Runde Ecken */
+    border-radius: 12px;
     font-size: 1.1rem;
-    cursor: pointer; /* Hand-Cursor beim Hover */
-    transition: all 0.2s ease-in-out; /* Weicher Hover-Effekt */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Leichter Schatten */
-    background-color: #007bff; /* Standard-Blau */
-    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background-color: #3b82f6; /* blue-500 */
+    color: #f8fafc;
 }
 
 /* === Hover-Effekt für Buttons === */
 .button-group button:hover {
-    background-color: #0056b3; /* Dunkleres Blau beim Hover */
+    background-color: #2563eb; /* blue-600 */
+    transform: translateY(-2px);
 }
