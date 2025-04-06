@@ -3,7 +3,6 @@ import "./NavBar.css";
 
 const NavBar: React.FC = () => {
     const navigate = useNavigate();
-
     const token = localStorage.getItem("token");
     const username = localStorage.getItem("username");
     const isLoggedIn = !!token;
