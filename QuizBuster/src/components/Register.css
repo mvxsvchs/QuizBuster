@@ -1,9 +1,9 @@
 /* Container-Zentrierung im Dark Theme */
 .register-container {
+    margin: 8rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
     background-color: #0f172a; /* Dark Slate (Tailwind slate-900) */
     color: #e2e8f0; /* slate-200 */
 }
