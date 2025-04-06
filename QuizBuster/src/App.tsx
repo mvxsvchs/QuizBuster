@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout & Seitenkomponenten
 import NavBar from './components/NavBar';         // Navigationsleiste
-import Login from './components/Login';           // Login-Formular
 import Register from './components/Register';     // Registrierungsformular
+import Login from './components/Login';           // Loginformular
+
 
 // Seiten
 import Home from './pages/Home';                  // Startseite mit Login/Registrieren-Hinweis
@@ -26,8 +27,8 @@ function App() {
                     <Route path="/" element={<Home />} />                   {/* Startseite */}
                     <Route path="/quiz" element={<QuizGame />} />           {/* Quiz-Spiel */}
                     <Route path="/leaderboard" element={<Leaderboard />} /> {/* Rangliste */}
-                    <Route path="/login" element={<Login />} />             {/* Login */}
                     <Route path="/register" element={<Register />} />       {/* Registrierung */}
+                    <Route path="/login" element={<Login />} />       {/* Registrierung */}
                     <Route path="/start" element={<Startseite />} />        {/* Startseite vor dem Quiz */}
                 </Routes>
             </div>

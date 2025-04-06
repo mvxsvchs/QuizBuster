@@ -1,51 +1,80 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./login-register.css";
+import axios from "axios";
+import "./login.css";
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate();
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+        setError("");
 
-        if (!username || !password) {
-            setError("Bitte fülle alle Felder aus.");
-            return;
+        const formData = new URLSearchParams();
+        formData.append("username", username);
+        formData.append("password", password);
+
+        try {
+            const response = await axios.post("http://localhost:8000/token", formData, {
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            });
+
+            if (response.status === 200) {
+                // Token speichern (optional, z.B. für Auth später)
+                localStorage.setItem("token", response.data.access_token);
+                navigate("/start");
+            }
+        } catch (err: any) {
+            if (err.response && err.response.data?.detail) {
+                setError(err.response.data.detail);
+            } else {
+                setError("Login fehlgeschlagen. Bitte versuch es erneut.");
+            }
         }
-
-        // 🔒 Hier könnte ein echter API-Call hin
-        console.log("Login erfolgreich:", username);
-
-        // Weiterleiten
-        navigate("/start");
     };
 
     return (
-        <div className="auth-container">
-        <h2>Login</h2>
-            <form onSubmit={handleLogin}>
+        <div className="login-container">
+            <form onSubmit={handleLogin} className="login-form">
+                <h2>Login</h2>
+
+                {error && <p className="login-error">{error}</p>}
+
                 <input
                     type="text"
                     placeholder="Benutzername"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                    className="login-input"
+                    required
                 />
+
                 <input
                     type="password"
                     placeholder="Passwort"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="login-input"
+                    required
                 />
-                {error && <p className="error">{error}</p>}
-                <button type="submit">Einloggen</button>
-                <p>Noch kein Konto? <a href="/register">Jetzt registrieren</a></p>
+
+                <button type="submit" className="login-button">
+                    Einloggen
+                </button>
+
+                <p className="login-link">
+                    Noch kein Konto?{" "}
+                    <span onClick={() => navigate("/register")}>Registrieren</span>
+                </p>
             </form>
         </div>
     );
 };
-
 
 export default Login;

@@ -1,85 +1,104 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./register.css";
 
-export default function Register() {
+const RegisterPage: React.FC = () => {
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate();
+
+    const passwordsMatch = confirmPassword === "" || password === confirmPassword;
 
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
+        setError("");
 
-        if (!username || !password || !confirmPassword) {
-            setError("Bitte fülle alle Felder aus.");
-            return;
-        }
-
-        if (password !== confirmPassword) {
+        if (!passwordsMatch) {
             setError("Die Passwörter stimmen nicht überein.");
             return;
         }
 
         try {
-            const response = await fetch("http://localhost:8000/register", {
-                method: "POST",
-                body: JSON.stringify({ username, password }),
+            const response = await axios.post("http://localhost:8000/register", {
+                username,
+                password,
             });
 
-            const data = await response.json();
-
-            if (!response.ok) {
-                setError(data.detail || "Registrierung fehlgeschlagen.");
-                return;
+            if (response.status === 200 || response.status === 201) {
+                navigate("/start");
             }
-
-            // Erfolgreich registriert
-            navigate("/start");
-        } catch (err) {
-            setError("Server nicht erreichbar.");
+        } catch (err: any) {
+            if (err.response && err.response.data?.detail) {
+                setError(err.response.data.detail);
+            } else {
+                setError("Registrierung fehlgeschlagen. Bitte versuch es später erneut.");
+            }
         }
     };
 
     return (
-        <form onSubmit={handleRegister} className="p-4 max-w-md mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">Registrieren</h2>
+        <div className="register-container">
+            <form onSubmit={handleRegister} className="register-form">
+                <h2>Registrieren</h2>
 
-            <input
-                type="text"
-                placeholder="Benutzername"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="w-full p-2 mb-2 border rounded"
-                required
-            />
+                {error && <p className="register-error">{error}</p>}
 
-            <input
-                type="password"
-                placeholder="Passwort"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-2 mb-2 border rounded"
-                required
-            />
+                <input
+                    type="text"
+                    placeholder="Benutzername"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    className="register-input"
+                    required
+                />
 
-            <input
-                type="password"
-                placeholder="Passwort bestätigen"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full p-2 mb-4 border rounded"
-                required
-            />
+                <input
+                    type="password"
+                    placeholder="Passwort"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="register-input"
+                    required
+                />
 
-            {error && <p className="text-red-600 mb-4">{error}</p>}
+                <input
+                    type="password"
+                    placeholder="Passwort bestätigen"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className={`register-input ${
+                        confirmPassword.length === 0
+                            ? ""
+                            : passwordsMatch
+                                ? "green"
+                                : "red"
+                    }`}
+                    required
+                />
 
-            <button
-                type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
-            >
-                Registrieren
-            </button>
-        </form>
+                {confirmPassword.length > 0 && (
+                    <p className={`register-confirm-msg ${passwordsMatch ? "green" : "red"}`}>
+                        {passwordsMatch
+                            ? "✅ Passwörter stimmen überein"
+                            : "❌ Passwörter stimmen nicht überein"}
+                    </p>
+                )}
+
+                <button type="submit" className="register-button">
+                    Registrieren
+                </button>
+
+                <p className="register-link">
+                    Schon ein Konto?{" "}
+                    <span onClick={() => navigate("/login")}>Zum Login</span>
+                </p>
+            </form>
+        </div>
     );
-}
+};
+
+export default RegisterPage;
