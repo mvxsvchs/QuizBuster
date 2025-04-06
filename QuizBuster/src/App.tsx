@@ -1,5 +1,6 @@
 // React Router wird genutzt, um verschiedene Seiten in der App aufzurufen
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Import der selbst erstellten Komponenten und Seiten
 import NavBar from './components/NavBar';         // Die Navigationsleiste oben
@@ -9,6 +10,7 @@ import Home from './pages/Home';                  // Öffentliche Startseite
 import QuizGame from './pages/QuizGame';          // Die Seite mit dem Quiz-Spiel
 import Leaderboard from './pages/Leaderboard';    // Rangliste mit Punkteständen
 import Startseite from './pages/StartingPage';    // Eigene Startseite für eingeloggte Nutzer
+import Profil from './pages/Profil';              // Eigene Startseite für eingeloggte Nutzer
 import './App.css';                               // Globale CSS-Datei für das Layout und Styling
 
 // Hauptkomponente der App
@@ -36,6 +38,9 @@ function App() {
 
                     {/* Seite zum Einloggen */}
                     <Route path="/login" element={<Login />} />
+
+                    {/* Seite für das Profil */}
+                    <Route path="/profil" element={<Profil />} />
 
                     {/* Eigene Startseite nach erfolgreichem Login */}
                     <Route path="/start" element={<Startseite />} />

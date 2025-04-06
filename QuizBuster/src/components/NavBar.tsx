@@ -44,7 +44,10 @@ const NavBar: React.FC = () => {
                             <li><Link to="/quiz">Spielen</Link></li>
 
                             {/* Benutzername anzeigen */}
-                            <li className="navbar-username">{username}</li>
+                            <li className="navbar-username">
+                                <Link to="/profil">{username}</Link>
+                            </li>
+
 
                             {/* Logout-Knopf */}
                             <li>

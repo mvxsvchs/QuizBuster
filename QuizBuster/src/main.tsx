@@ -1,5 +1,6 @@
 // React-Komponente, die zusätzliche Prüfungen im Entwicklungsmodus aktiviert
 import { StrictMode } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 
 // React-Funktion, um die Anwendung in das HTML-Dokument einzubetten
 import { createRoot } from 'react-dom/client';
