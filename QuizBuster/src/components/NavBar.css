@@ -1,67 +1,73 @@
+/* === Navigationsleiste oben auf der Seite === */
 .navbar {
-    width: 100%;
-    background-color: #1e293b; /* Dark slate */
-    color: #f1f5f9;
-    padding: 1rem 0;
-    position: fixed;
+    width: 100%;                               /* volle Breite */
+    background-color: #1e293b;                 /* dunkelblauer Hintergrund (slate-800) */
+    color: #f1f5f9;                            /* heller Text (slate-100) */
+    padding: 1rem 0;                           /* vertikaler Innenabstand */
+    position: fixed;                           /* immer oben sichtbar */
     top: 0;
     left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;                             /* liegt über allen anderen Elementen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* dezenter Schatten für Tiefe */
 }
 
+/* === Container innerhalb der Navbar, begrenzt auf max. Breite === */
 .navbar-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;                            /* zentriert auf der Seite */
     padding: 0 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;           /* Abstand zwischen Logo und Menü */
     align-items: center;
 }
 
+/* === Logo oder Titel des Spiels oben links === */
 .navbar-logo {
     font-size: 1.5rem;
-    text-decoration: none;
-    color: #38bdf8; /* Sky blue */
+    text-decoration: none;                    /* keine Unterstreichung */
+    color: #38bdf8;                            /* sky-blue */
     font-weight: 600;
 }
 
+/* === Menü-Liste (Startseite, Quiz, Rangliste etc.) === */
 .navbar-menu {
-    list-style: none;
+    list-style: none;                         /* keine Aufzählungszeichen */
     display: flex;
-    gap: 1.5rem;
+    gap: 1.5rem;                              /* Abstand zwischen den Einträgen */
     margin: 0;
     padding: 0;
 }
 
+/* === Einzelne Menü-Punkte im Flex-Modus zentriert === */
 .navbar-menu li {
     display: flex;
     align-items: center;
 }
 
+/* === Links im Menü === */
 .navbar-menu li a {
     text-decoration: none;
     color: #f1f5f9;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s;                   /* sanfter Farbübergang beim Hover */
 }
 
 .navbar-menu li a:hover {
-    color: #38bdf8;
+    color: #38bdf8;                            /* sky-blue beim Hover */
 }
 
-/* Username */
+/* === Benutzername-Anzeige (wenn eingeloggt) === */
 .navbar-username {
     font-weight: 500;
-    color: #cbd5e1;
+    color: #cbd5e1;                           /* helles Grau (slate-300) */
     font-size: 1rem;
 }
 
-/* Logout Button */
+/* === Logout-Button (stilisiert wie ein Link) === */
 .logout-button {
-    background: none;
+    background: none;                         /* kein Hintergrund */
     border: none;
-    color: #38bdf8;
+    color: #38bdf8;                            /* sky-blue */
     font-size: 1rem;
     cursor: pointer;
     padding: 0;
@@ -69,5 +75,5 @@
 }
 
 .logout-button:hover {
-    color: #60a5fa; /* helleres Blau */
+    color: #60a5fa;                            /* helleres Blau beim Hover */
 }

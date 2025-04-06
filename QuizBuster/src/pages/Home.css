@@ -1,65 +1,65 @@
 /* === Hauptcontainer der Startseite === */
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 40px 20px;
-    height: auto;
-    margin: 100px 20px; /* etwas weniger Rand für kleinere Screens */
-    background-color: #0f172a; /* Dark Theme Background (slate-900) */
+    display: flex;                  /* Flexbox für vertikale Anordnung */
+    flex-direction: column;        /* Elemente werden untereinander angeordnet */
+    align-items: center;           /* Inhalte horizontal zentrieren */
+    justify-content: flex-start;   /* Start oben, kein vertikales Zentrieren */
+    padding: 40px 20px;            /* Innenabstand (oben/unten & seitlich) */
+    height: auto;                  /* Höhe richtet sich nach Inhalt */
+    margin: 100px 20px;            /* Außenabstand oben + an den Seiten */
+    background-color: #0f172a;     /* Dunkler Hintergrund (slate-900) */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    text-align: center;            /* Zentriert Text innerhalb des Containers */
 }
 
-/* === Überschrift === */
+/* === Überschrift auf der Startseite === */
 .home h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #f8fafc; /* Helles Weiß (fast) */
+    font-size: 2.5rem;             /* Große Schrift für den Titel */
+    margin-bottom: 20px;           /* Abstand nach unten */
+    color: #f8fafc;                /* Helles Weiß für gute Lesbarkeit */
 }
 
-/* === Einleitungstext === */
+/* === Beschreibungstext unter der Überschrift === */
 .home p {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    color: #cbd5e1; /* slate-300 */
-    max-width: 600px;
+    font-size: 1.1rem;             /* Etwas größer als Standardtext */
+    margin-bottom: 40px;           /* Abstand zum Buttonbereich */
+    color: #cbd5e1;                /* Heller Grauton (slate-300) */
+    max-width: 600px;              /* Breite begrenzen für bessere Lesbarkeit */
 }
 
-/* === Button-Container (Login & Registrierung) === */
+/* === Container für Login- und Registrieren-Buttons === */
 .button-group {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: flex;                 /* Flexbox für horizontales Layout */
+    gap: 20px;                     /* Abstand zwischen den Buttons */
+    justify-content: center;      /* Zentriert Buttons horizontal */
+    flex-wrap: wrap;              /* Bei kleinen Bildschirmen werden Buttons umgebrochen */
     width: 100%;
-    max-width: 500px;
+    max-width: 500px;             /* Breite begrenzen für bessere Darstellung */
 }
 
-/* === Links im Button-Container === */
+/* === Styling für die Links im Buttonbereich === */
 .button-group a {
-    flex: 1 1 40%;
-    text-decoration: none;
+    flex: 1 1 40%;                /* Flexibles Verhalten (z. B. 2 Buttons nebeneinander) */
+    text-decoration: none;       /* Keine Unterstreichung */
 }
 
-/* === Gemeinsamer Button-Stil === */
+/* === Basis-Styling für beide Buttons (Login + Registrierung) === */
 .button-group button {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    background-color: #3b82f6; /* blue-500 */
-    color: #f8fafc;
+    width: 100%;                  /* Button füllt gesamten Link-Bereich */
+    padding: 16px;                /* Innenabstand im Button */
+    border: none;                 /* Kein Rahmen */
+    border-radius: 12px;          /* Abgerundete Ecken */
+    font-size: 1.1rem;            /* Gut lesbare Schriftgröße */
+    font-weight: 600;             /* Etwas fettere Schrift */
+    cursor: pointer;             /* Mauszeiger zeigt "klickbar" an */
+    transition: all 0.2s ease-in-out; /* Sanfter Hover-Effekt */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Leichter Schatteneffekt */
+    background-color: #3b82f6;   /* Hauptfarbe (blue-500) */
+    color: #f8fafc;               /* Helle Schriftfarbe */
 }
 
 /* === Hover-Effekt für Buttons === */
 .button-group button:hover {
-    background-color: #2563eb; /* blue-600 */
-    transform: translateY(-2px);
+    background-color: #2563eb;    /* Etwas dunkleres Blau (blue-600) */
+    transform: translateY(-2px);  /* Button hebt sich leicht an */
 }

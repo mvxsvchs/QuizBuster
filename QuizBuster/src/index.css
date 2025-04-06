@@ -1,46 +1,51 @@
-/* === Globale Basis-Styles (Dark Mode only) === */
+/* === Globale Basis-Styles für die gesamte Anwendung (Dark Mode Only) === */
 :root {
+  /* Schriftart für alle Texte in der App */
   font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  /* Zeilenhöhe und Standardschriftgewicht */
   line-height: 1.5;
   font-weight: 400;
 
-  color: #f1f5f9; /* slate-100 */
-  background-color: #0f172a; /* slate-900 */
+  /* Text- und Hintergrundfarbe im Dark Mode */
+  color: #f1f5f9;            /* Helle Schrift (slate-100) */
+  background-color: #0f172a; /* Dunkler Hintergrund (slate-900) */
 
+  /* Optimierung für Textdarstellung */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* === Link-Styling === */
+/* === Allgemeines Styling für Links === */
 a {
   font-weight: 500;
-  color: #38bdf8; /* sky-400 */
-  text-decoration: none;
-  transition: color 0.25s;
+  color: #38bdf8;           /* Helles Blau für Links (sky-400) */
+  text-decoration: none;    /* Keine Unterstreichung */
+  transition: color 0.25s;  /* Sanfter Farbwechsel beim Hover */
 }
 
 a:hover {
-  color: #0ea5e9; /* sky-500 */
+  color: #0ea5e9;           /* Etwas dunkleres Blau beim Überfahren mit der Maus (sky-500) */
 }
 
-/* === Basis-Layout des Body === */
+/* === Basis-Layout für den Body-Bereich === */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 0;                        /* Entfernt Standard-Außenabstand */
+  display: flex;                   /* Zentriert den Inhalt */
+  place-items: center;             /* Vertikal und horizontal mittig */
   justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: inherit;
+  min-width: 320px;                /* Mindestbreite für kleine Geräte */
+  min-height: 100vh;               /* Nimmt die gesamte Bildschirmhöhe ein */
+  background-color: inherit;       /* Nutzt die Hintergrundfarbe vom :root */
 }
 
-/* === Überschriften === */
+/* === Überschriften-Styling (h1, h2, h3) === */
 h1, h2, h3 {
   line-height: 1.2;
-  font-weight: 700;
-  color: #f8fafc; /* fast weiß */
+  font-weight: 700;                /* Fettgedruckt */
+  color: #f8fafc;                  /* Fast weiß (slate-50) */
 }
 
 h1 {
@@ -55,28 +60,29 @@ h3 {
   font-size: 1.5rem;
 }
 
-/* === Text & Inputs === */
+/* === Grundtext und Eingabefelder === */
 p, label, input, textarea {
-  color: #e2e8f0; /* slate-200 */
+  color: #e2e8f0;                  /* Heller Grauton für Lesbarkeit */
   font-size: 1rem;
 }
 
-/* === Input-Felder === */
+/* === Gestaltung der Input- und Textarea-Felder === */
 input, textarea {
-  background-color: #1e293b; /* slate-800 */
-  border: 1px solid #334155; /* slate-700 */
+  background-color: #1e293b;       /* Dunkler Hintergrund (slate-800) */
+  border: 1px solid #334155;       /* Rahmenfarbe (slate-700) */
   padding: 0.6rem;
   border-radius: 0.375rem;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* === Fokus-Effekt bei Klick in Input/Textarea === */
 input:focus, textarea:focus {
-  outline: none;
-  border-color: #38bdf8; /* sky-400 */
-  background-color: #0f172a; /* slate-900 */
+  outline: none;                   /* Kein Standard-Fokusrahmen */
+  border-color: #38bdf8;           /* Blauer Rand beim Fokus */
+  background-color: #0f172a;       /* Etwas dunklerer Hintergrund */
 }
 
-/* === Buttons === */
+/* === Buttons (Standard-Stil) === */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -84,18 +90,20 @@ button {
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
-  background-color: #3b82f6; /* blue-500 */
+  background-color: #3b82f6;       /* Blau (blue-500) */
   color: white;
   cursor: pointer;
   transition: background-color 0.25s, border-color 0.25s;
 }
 
+/* === Hover-Effekt für Buttons === */
 button:hover {
-  background-color: #2563eb; /* blue-600 */
+  background-color: #2563eb;       /* Etwas dunkleres Blau (blue-600) */
 }
 
+/* === Fokus-Stil für bessere Tastatur-Bedienung === */
 button:focus,
 button:focus-visible {
-  outline: 3px solid #38bdf8;
+  outline: 3px solid #38bdf8;      /* Blauer Fokus-Ring */
   outline-offset: 2px;
 }

@@ -1,24 +1,29 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import "./login.css";
+import { useNavigate } from "react-router-dom"; // Für die Weiterleitung nach erfolgreichem Login
+import axios from "axios";                      // Für den API-Aufruf
+import "./login.css";                           // CSS für das Layout des Login-Formulars
 
+// Login-Komponente
 const Login: React.FC = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate();             // ermöglicht Navigation per Code
 
+    // Zustände für Eingabefelder & Fehlermeldung
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
+    // Wird beim Absenden des Formulars aufgerufen
     const handleLogin = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setError("");
+        e.preventDefault(); // Verhindert Seiten-Neuladen
+        setError("");       // Fehlermeldung zurücksetzen
 
+        // Formulardaten vorbereiten (für OAuth2-kompatibles Backend)
         const formData = new URLSearchParams();
         formData.append("username", username);
         formData.append("password", password);
 
         try {
+            // Anfrage an /token-Endpunkt schicken
             const response = await axios.post("http://localhost:8000/token", formData, {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -26,12 +31,15 @@ const Login: React.FC = () => {
             });
 
             if (response.status === 200) {
-                // 🟢 Token & Username speichern
+                // 🟢 Token und Benutzername im localStorage speichern
                 localStorage.setItem("token", response.data.access_token);
-                localStorage.setItem("username", username); // Username zusätzlich speichern
+                localStorage.setItem("username", username);
+
+                // Weiterleitung zur Startseite für eingeloggte Nutzer
                 navigate("/start");
             }
         } catch (err: any) {
+            // Fehlerbehandlung bei falschen Logindaten oder Serverfehlern
             if (err.response && err.response.data?.detail) {
                 setError(err.response.data.detail);
             } else {
@@ -40,13 +48,16 @@ const Login: React.FC = () => {
         }
     };
 
+    // === JSX-Ausgabe ===
     return (
         <div className="login-container">
             <form onSubmit={handleLogin} className="login-form">
                 <h2>Login</h2>
 
+                {/* Fehlermeldung (falls vorhanden) */}
                 {error && <p className="login-error">{error}</p>}
 
+                {/* Benutzername-Eingabe */}
                 <input
                     type="text"
                     placeholder="Benutzername"
@@ -56,6 +67,7 @@ const Login: React.FC = () => {
                     required
                 />
 
+                {/* Passwort-Eingabe */}
                 <input
                     type="password"
                     placeholder="Passwort"
@@ -65,10 +77,12 @@ const Login: React.FC = () => {
                     required
                 />
 
+                {/* Login-Button */}
                 <button type="submit" className="login-button">
                     Einloggen
                 </button>
 
+                {/* Link zur Registrierung */}
                 <p className="login-link">
                     Noch kein Konto?{" "}
                     <span onClick={() => navigate("/register")}>Registrieren</span>

@@ -1,65 +1,66 @@
+/* === Container für die gesamte Rangliste === */
 .leaderboard {
-    max-width: 800px;
-    margin: 8rem auto;
-    padding: 2rem;
-    background-color: #1e293b;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    font-family: 'Segoe UI', sans-serif;
-    color: #f1f5f9;
+    max-width: 800px;                     /* maximale Breite der Rangliste */
+    margin: 8rem auto;                    /* Abstand nach oben und zentriert */
+    padding: 2rem;                        /* Innenabstand */
+    background-color: #1e293b;            /* dunkler Hintergrund (slate-800) */
+    border-radius: 12px;                  /* abgerundete Ecken */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* leichter Schatten für Tiefe */
+    font-family: 'Segoe UI', sans-serif;  /* moderne, gut lesbare Schrift */
+    color: #f1f5f9;                       /* heller Text (slate-100) */
 }
 
-/* Überschrift */
+/* === Überschrift der Rangliste === */
 .leaderboard h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    color: #f8fafc;
+    text-align: center;                   /* zentrierter Text */
+    margin-bottom: 2rem;                  /* Abstand zur Tabelle */
+    font-size: 3rem;                      /* große Schriftgröße */
+    color: #f8fafc;                       /* fast weiß */
 }
 
-/* Tabelle */
+/* === Tabelle für die Ranglisteneinträge === */
 .leaderboard table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%;                          /* Tabelle nimmt volle Breite ein */
+    border-collapse: collapse;           /* keine doppelten Rahmen */
 }
 
-/* Zellen */
+/* === Tabellenzellen: Kopfzeile und normale Zellen === */
 .leaderboard th,
 .leaderboard td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #334155; /* slate-700 */
+    padding: 1rem;                        /* Innenabstand für bessere Lesbarkeit */
+    text-align: left;                     /* Text linksbündig */
+    border-bottom: 1px solid #334155;     /* dünne Linie als Trennung (slate-700) */
 }
 
-/* Kopf */
+/* === Kopfzeile der Tabelle === */
 .leaderboard th {
-    background-color: #3b82f6;
-    color: #f8fafc;
-    font-size: 1.1rem;
+    background-color: #3b82f6;            /* blau (blue-500) */
+    color: #f8fafc;                       /* weißer Text */
+    font-size: 1.1rem;                    /* leicht größerer Text */
 }
 
-/* Zeilen abwechselnd */
+/* === Abwechselnde Hintergrundfarben für bessere Lesbarkeit === */
 .leaderboard tr:nth-child(even) {
-    background-color: #0f172a; /* slate-900 */
+    background-color: #0f172a;            /* etwas dunkler (slate-900) */
 }
 
 .leaderboard tr:nth-child(odd) {
-    background-color: #1e293b;
+    background-color: #1e293b;            /* Grundfarbe beibehalten */
 }
 
-/* Responsive fallback */
+/* === Responsive Design für kleinere Bildschirme (z. B. Smartphones) === */
 @media (max-width: 768px) {
     .leaderboard {
-        padding: 1rem;
+        padding: 1rem;                    /* weniger Abstand innen bei kleinen Bildschirmen */
     }
 
     .leaderboard h1 {
-        font-size: 2rem;
+        font-size: 2rem;                  /* kleinere Überschrift */
     }
 
     .leaderboard th,
     .leaderboard td {
-        padding: 0.75rem;
-        font-size: 0.95rem;
+        padding: 0.75rem;                 /* kleinerer Abstand */
+        font-size: 0.95rem;               /* kleinere Schriftgröße */
     }
 }

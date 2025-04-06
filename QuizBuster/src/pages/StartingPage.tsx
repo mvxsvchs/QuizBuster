@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom'; // React Router Link für Navigation
-import './StartingPage.css'; // CSS für das Layout und Styling der Startseite
+import { Link } from 'react-router-dom'; // React Router: Link-Komponente für Navigation ohne Neuladen
+import './StartingPage.css';             // Externe CSS-Datei für das Styling der Startseite
 
-// Startseite-Komponente des Quiz-Spiels
+// Komponente für die Startseite nach dem Login
 const Startseite: React.FC = () => {
     return (
         <div className="Startseite">
-            {/* Überschrift des Spiels */}
+            {/* Hauptüberschrift */}
             <h1>Willkommen zu QuizBuster!</h1>
 
-            {/* Kurze Beschreibung */}
+            {/* Kurze Beschreibung unter dem Titel */}
             <p>Teste dein Wissen mit unserem spannenden Quiz.</p>
 
-            {/* Navigations-Link zum Quiz (führt zur /quiz Route) */}
+            {/* Start-Button: führt zur Quiz-Seite (/quiz) */}
             <Link to="/quiz">
                 <button className="start-button">Quiz starten</button>
             </Link>

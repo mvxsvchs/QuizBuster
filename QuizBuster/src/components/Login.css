@@ -1,41 +1,41 @@
-/* Container-Zentrierung im Dark Mode */
+/* === Login-Seite: Container-Zentrierung im Dark Mode === */
 .login-container {
-    margin: 8rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0f172a; /* dunkler Hintergrund */
-    color: #e2e8f0; /* heller Text */
+    margin: 8rem auto;                      /* Abstand nach oben, zentriert */
+    display: flex;                          /* Flexbox-Ausrichtung */
+    align-items: center;                    /* Vertikal zentriert */
+    justify-content: center;                /* Horizontal zentriert */
+    background-color: #0f172a;              /* sehr dunkler Hintergrund (slate-900) */
+    color: #e2e8f0;                         /* heller Text (slate-200) */
 }
 
-/* Formular-Styling */
+/* === Formular-Box === */
 .login-form {
-    background-color: #1e293b; /* slate-800 */
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    background-color: #1e293b;              /* dunkler Container (slate-800) */
+    padding: 2rem;                          /* großzügiger Innenabstand */
+    border-radius: 1rem;                    /* stark abgerundete Ecken */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* intensiver Schatten für Tiefe */
     width: 100%;
-    max-width: 400px;
-    color: #f1f5f9;
+    max-width: 400px;                       /* feste Maximalbreite */
+    color: #f1f5f9;                         /* heller Standardtext */
 }
 
-/* Überschrift */
+/* === Überschrift im Formular === */
 .login-form h2 {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #f8fafc;
+    color: #f8fafc;                         /* fast weiß */
 }
 
-/* Input-Felder */
+/* === Eingabefelder für Benutzername und Passwort === */
 .login-input {
     width: 90%;
     padding: 0.6rem;
     margin-bottom: 1rem;
-    border-radius: 0.375rem;
-    border: 1px solid #334155; /* slate-700 */
-    background-color: #0f172a;
+    border-radius: 0.375rem;               /* sanfte Rundung */
+    border: 1px solid #334155;             /* dunkler Rand (slate-700) */
+    background-color: #0f172a;             /* sehr dunkler Hintergrund */
     color: #f1f5f9;
     font-size: 1rem;
     transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -43,23 +43,23 @@
 
 .login-input:focus {
     outline: none;
-    border-color: #38bdf8; /* sky-400 */
+    border-color: #38bdf8;                 /* Fokus-Farbe (sky-400) */
     background-color: #1e293b;
 }
 
-/* Fehlertext */
+/* === Fehlermeldung bei Loginfehlern === */
 .login-error {
-    color: #f87171;
+    color: #f87171;                        /* rötlicher Warntext */
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
 
-/* Button */
+/* === Login-Button === */
 .login-button {
     width: 95%;
     padding: 0.6rem;
-    background-color: #3b82f6;
+    background-color: #3b82f6;            /* Blau (blue-500) */
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -70,20 +70,20 @@
 }
 
 .login-button:hover {
-    background-color: #2563eb;
-    transform: translateY(-1px);
+    background-color: #2563eb;            /* dunkleres Blau beim Hover (blue-600) */
+    transform: translateY(-1px);          /* leichter "Lift"-Effekt */
 }
 
-/* Link zu Registrierung */
+/* === Hinweis und Link zur Registrierung === */
 .login-link {
     margin-top: 1rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #94a3b8;                        /* heller Grauton */
 }
 
 .login-link span {
-    color: #38bdf8;
+    color: #38bdf8;                        /* sky-400 */
     font-weight: 500;
     cursor: pointer;
 }

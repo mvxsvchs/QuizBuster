@@ -1,48 +1,48 @@
-/* === Hauptcontainer der Startseite === */
+/* === Hauptcontainer für die Startseite nach dem Login === */
 .Startseite {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 40px 20px;
-    height: auto;
-    margin: 100px 20px;
-    background-color: #0f172a; /* Dark Background (slate-900) */
+    display: flex;                      /* Flexbox-Layout zur vertikalen Ausrichtung */
+    flex-direction: column;            /* Elemente werden untereinander angeordnet */
+    align-items: center;               /* Zentrierung horizontal */
+    justify-content: flex-start;       /* Start von oben, kein zentriertes Layout */
+    padding: 40px 20px;                /* Innenabstand (oben/unten & seitlich) */
+    height: auto;                      /* Höhe passt sich dem Inhalt an */
+    margin: 100px 20px;                /* Abstand zur Außenkante oben und seitlich */
+    background-color: #0f172a;         /* Dunkler Hintergrund (slate-900) */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    text-align: center;                /* Text zentriert ausrichten */
 }
 
-/* === Hauptüberschrift === */
+/* === Hauptüberschrift auf der Startseite === */
 .Startseite h1 {
-    font-size: 2.5rem;
-    color: #f8fafc; /* Helles Weiß-Blau (fast weiß) */
-    margin-bottom: 20px;
+    font-size: 2.5rem;                 /* große Schriftgröße für die Begrüßung */
+    color: #f8fafc;                    /* sehr helles Blau-Weiß für gute Lesbarkeit */
+    margin-bottom: 20px;              /* Abstand unterhalb der Überschrift */
 }
 
-/* === Beschreibungstext === */
+/* === Beschreibungstext unter der Überschrift === */
 .Startseite p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    color: #cbd5e1; /* slate-300 */
-    max-width: 600px;
+    font-size: 1.2rem;                 /* leicht über normaler Schriftgröße */
+    margin: 1rem 0;                    /* vertikaler Abstand oben und unten */
+    color: #cbd5e1;                    /* heller Grauton (slate-300) */
+    max-width: 600px;                 /* beschränkte Breite für bessere Lesbarkeit */
 }
 
-/* === Startbutton Styling === */
+/* === Button zum Starten des Spiels === */
 .start-button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    background-color: #3b82f6; /* blue-500 */
-    border: none;
-    color: #f8fafc;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;                /* Innenabstand (oben/unten & seitlich) */
+    font-size: 1.2rem;                 /* große, gut sichtbare Schrift */
+    margin-top: 2rem;                  /* Abstand zum vorherigen Element */
+    background-color: #3b82f6;        /* Hauptfarbe Blau (blue-500) */
+    border: none;                      /* kein Rahmen */
+    color: #f8fafc;                    /* heller Text */
+    border-radius: 8px;                /* leicht abgerundete Ecken */
+    cursor: pointer;                   /* Zeigt interaktives Element */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* weicher Hover-Effekt */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
 }
 
-/* === Hover-Effekt für Button === */
+/* === Hover-Zustand für den Startbutton === */
 .start-button:hover {
-    background-color: #2563eb; /* blue-600 */
-    transform: translateY(-2px);
+    background-color: #2563eb;        /* etwas dunkleres Blau (blue-600) */
+    transform: translateY(-2px);      /* leichter "Hover-Lift"-Effekt */
 }

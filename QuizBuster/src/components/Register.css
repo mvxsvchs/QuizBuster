@@ -1,70 +1,70 @@
-/* Container-Zentrierung im Dark Theme */
+/* === Zentrierter Container für das Registrierungsformular === */
 .register-container {
-    margin: 8rem auto;
+    margin: 8rem auto;                         /* Abstand nach oben, mittig zentriert */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #0f172a; /* Dark Slate (Tailwind slate-900) */
-    color: #e2e8f0; /* slate-200 */
+    background-color: #0f172a;                 /* dunkler Hintergrund (slate-900) */
+    color: #e2e8f0;                            /* heller Text (slate-200) */
 }
 
-/* Formular-Styling */
+/* === Formular-Box selbst === */
 .register-form {
-    background-color: #1e293b; /* slate-800 */
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    background-color: #1e293b;                 /* dunkle Box (slate-800) */
+    padding: 2rem;                             /* Innenabstand */
+    border-radius: 1rem;                       /* stark abgerundete Ecken */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);  /* starker Schatten für Tiefe */
     width: 100%;
-    max-width: 400px;
-    color: #f1f5f9; /* slate-100 */
+    max-width: 400px;                          /* begrenzte Maximalbreite */
+    color: #f1f5f9;                            /* sehr heller Text (slate-100) */
 }
 
-/* Überschrift */
+/* === Formular-Überschrift === */
 .register-form h2 {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #f8fafc; /* helles Weiß-Blau */
+    color: #f8fafc;                            /* fast weiß */
 }
 
-/* Input-Felder */
+/* === Input-Felder für Benutzername, Passwort, etc. === */
 .register-input {
     width: 90%;
     padding: 0.6rem;
     margin-bottom: 1rem;
-    border-radius: 0.375rem;
-    border: 1px solid #334155; /* slate-700 */
-    background-color: #0f172a; /* dunkler Hintergrund */
-    color: #f1f5f9; /* heller Text */
+    border-radius: 0.375rem;                   /* leicht abgerundete Ecken */
+    border: 1px solid #334155;                 /* dunkler Rand (slate-700) */
+    background-color: #0f172a;                 /* sehr dunkler Hintergrund */
+    color: #f1f5f9;
     font-size: 1rem;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .register-input:focus {
     outline: none;
-    border-color: #38bdf8; /* sky-400 */
-    background-color: #1e293b;
+    border-color: #38bdf8;                     /* Fokus-Farbe (sky-400) */
+    background-color: #1e293b;                 /* leicht aufgehellt beim Fokus */
 }
 
-/* Farben bei Validierung */
+/* === Live-Validierung: grün oder rot === */
 .register-input.green {
-    border-color: #22c55e; /* lime green */
+    border-color: #22c55e;                     /* grün für gültig */
 }
 
 .register-input.red {
-    border-color: #ef4444; /* red */
+    border-color: #ef4444;                     /* rot für ungültig */
 }
 
-/* Fehlertext */
+/* === Fehlermeldung unterhalb des Formulars === */
 .register-error {
-    color: #f87171; /* red-400 */
+    color: #f87171;                            /* rot (red-400) */
     font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
 
-/* Bestätigungstext */
+/* === Passwort-Bestätigung: Text unter dem Eingabefeld === */
 .register-confirm-msg {
     font-size: 0.875rem;
     margin-bottom: 1rem;
@@ -72,18 +72,18 @@
 }
 
 .register-confirm-msg.green {
-    color: #4ade80; /* green-400 */
+    color: #4ade80;                            /* grün (green-400) */
 }
 
 .register-confirm-msg.red {
-    color: #f87171; /* red-400 */
+    color: #f87171;                            /* rot (red-400) */
 }
 
-/* Button */
+/* === Registrieren-Button === */
 .register-button {
     width: 95%;
     padding: 0.6rem;
-    background-color: #3b82f6; /* blue-500 */
+    background-color: #3b82f6;                /* blau (blue-500) */
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -94,20 +94,20 @@
 }
 
 .register-button:hover {
-    background-color: #2563eb; /* blue-600 */
-    transform: translateY(-1px);
+    background-color: #2563eb;                /* dunkleres Blau (blue-600) */
+    transform: translateY(-1px);              /* kleiner Hover-Effekt */
 }
 
-/* Link zu Login */
+/* === Link unterhalb des Formulars zum Login === */
 .register-link {
     margin-top: 1rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #94a3b8; /* slate-400 */
+    color: #94a3b8;                            /* grauer Ton (slate-400) */
 }
 
 .register-link span {
-    color: #38bdf8; /* sky-400 */
+    color: #38bdf8;                            /* sky-400 */
     font-weight: 500;
     cursor: pointer;
 }

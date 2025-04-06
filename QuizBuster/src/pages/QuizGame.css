@@ -1,16 +1,16 @@
-/* === Quiz Container === */
+/* === Container für das gesamte Quiz-Spiel === */
 .quiz {
-    max-width: 800px;
-    margin: 8rem auto;
-    padding: 2rem;
-    background-color: #1e293b; /* slate-800 */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    font-family: 'Segoe UI', sans-serif;
-    color: #f1f5f9; /* slate-100 */
+    max-width: 800px;                          /* maximale Breite */
+    margin: 8rem auto;                         /* Abstand nach oben und zentriert */
+    padding: 2rem;                             /* Innenabstand */
+    background-color: #1e293b;                 /* dunkler Hintergrund (slate-800) */
+    border-radius: 12px;                       /* abgerundete Ecken */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* dunkler Schatten */
+    font-family: 'Segoe UI', sans-serif;       /* moderne Schriftart */
+    color: #f1f5f9;                            /* helle Textfarbe (slate-100) */
 }
 
-/* === Fragebereich === */
+/* === Bereich für die aktuelle Frage === */
 .question-section {
     margin-bottom: 2rem;
 }
@@ -19,22 +19,22 @@
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #38bdf8; /* sky-400 */
+    color: #38bdf8;                            /* helles Blau für Kategorien (sky-400) */
 }
 
 .question-text {
     font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #f8fafc;
+    color: #f8fafc;                            /* fast weiß */
 }
 
-/* === Timer === */
+/* === Timer-Balken oberhalb der Frage === */
 .timer {
     position: relative;
     width: 100%;
     height: 10px;
-    background-color: #334155; /* slate-700 */
+    background-color: #334155;                /* dunkler Hintergrund (slate-700) */
     border-radius: 5px;
     margin-bottom: 1.5rem;
     overflow: hidden;
@@ -42,7 +42,7 @@
 
 .timer-bar {
     height: 100%;
-    background-color: #22c55e; /* green-500 */
+    background-color: #22c55e;                /* grün für verbleibende Zeit */
     transition: width 1s linear;
 }
 
@@ -54,20 +54,20 @@
     color: #e2e8f0;
 }
 
-/* === Antwortbereich === */
+/* === Bereich für Antwortmöglichkeiten === */
 .answer-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem;                                 /* Abstand zwischen Buttons */
 }
 
 .answer-button {
-    flex: 1 1 calc(50% - 1rem);
+    flex: 1 1 calc(50% - 1rem);               /* zwei Buttons pro Zeile */
     padding: 1.25rem;
     font-size: 1.2rem;
-    border: 1px solid #475569; /* slate-600 */
+    border: 1px solid #475569;                /* Rahmenfarbe (slate-600) */
     border-radius: 6px;
-    background-color: #0f172a; /* slate-900 */
+    background-color: #0f172a;                /* sehr dunkler Hintergrund */
     color: #f1f5f9;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -78,33 +78,36 @@
     border-color: #38bdf8;
 }
 
-/* Richtige Antwort */
+/* === Stil für richtige Antwort === */
 .answer-button.correct {
-    background-color: #22c55e;
+    background-color: #22c55e;                /* grün */
     color: #fff;
     border-color: #22c55e;
 }
 
-/* Falsche Antwort */
+/* === Stil für falsche Antwort === */
 .answer-button.incorrect {
-    background-color: #ef4444;
+    background-color: #ef4444;                /* rot */
     color: #fff;
     border-color: #ef4444;
 }
 
-/* === Punktestand === */
+/* === Punktestand am Ende des Spiels === */
 .score-section {
     font-size: 2rem;
     text-align: center;
     padding: 2rem;
-    background-color: #14532d; /* dark green background */
+    background-color: #14532d;                /* dunkles Grün */
     border: 1px solid #22c55e;
     border-radius: 6px;
-    color: #bbf7d0; /* green-200 */
+    color: #bbf7d0;                            /* helles Grün */
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* === Ranglisten-Prompt === */
+/* === Bereich zur Eingabe für Rangliste (optional) === */
 .leaderboard-prompt {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -143,7 +146,7 @@
 
 /* Speichern-Button */
 .leaderboard-prompt button:first-of-type {
-    background-color: #3b82f6;
+    background-color: #3b82f6;               /* blau */
     color: #fff;
 }
 
@@ -153,15 +156,15 @@
 
 /* Abbrechen-Button */
 .leaderboard-prompt button:last-of-type {
-    background-color: #64748b; /* slate-500 */
+    background-color: #64748b;               /* graublau (slate-500) */
     color: #e2e8f0;
 }
 
 .leaderboard-prompt button:last-of-type:hover {
-    background-color: #475569; /* slate-600 */
+    background-color: #475569;
 }
 
-/* === Kategorieauswahl === */
+/* === Kategorieauswahl vor dem Quizstart === */
 .category-select {
     text-align: center;
     margin-bottom: 2rem;
@@ -190,12 +193,12 @@
     transform: translateY(-2px);
 }
 
-/* === Erneut spielen Button === */
+/* === Button zum Neustart des Spiels nach dem Ergebnis === */
 .start-button {
     margin-top: 2rem;
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: #3b82f6; /* blue-500 */
+    background-color: #3b82f6;
     color: #f8fafc;
     border: none;
     border-radius: 8px;
@@ -204,20 +207,6 @@
 }
 
 .start-button:hover {
-    background-color: #2563eb; /* blue-600 */
+    background-color: #2563eb;
     transform: translateY(-2px);
-}
-
-.score-section {
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem;
-    background-color: #14532d;
-    border: 1px solid #22c55e;
-    border-radius: 6px;
-    color: #bbf7d0;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }

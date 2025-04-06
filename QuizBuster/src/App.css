@@ -1,19 +1,19 @@
-/* === Grundlayout für das gesamte Dokument  === */
+/* === Grundlegendes Layout für die gesamte Seite === */
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* verhindert horizontales Scrollen */
-  width: 100%;
-  min-height: 100%;
-  background-color: #0f172a; /* Dunkler Hintergrund  */
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  color: #f1f5f9; /* Heller Text (slate-100) */
+  margin: 0;                /* Entfernt Standard-Außenabstand des Browsers */
+  padding: 0;               /* Entfernt Standard-Innenabstand */
+  overflow-x: hidden;       /* Verhindert horizontales Scrollen bei Überbreite */
+  width: 100%;              /* Volle Breite einnehmen */
+  min-height: 100%;         /* Mindesthöhe: gesamte Fensterhöhe */
+  background-color: #0f172a; /* Dunkler Hintergrund für das Gesamtbild */
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; /* Gut lesbare Schriftarten */
+  color: #f1f5f9;           /* Helle Schriftfarbe für guten Kontrast auf dunklem Hintergrund */
 }
 
-/* === Hauptcontainer (React Root) === */
+/* === Hauptcontainer der React-App === */
 #root {
-  min-width: 100vw;         /* ganze Bildschirmbreite */
-  text-align: center;       /* Inhalt zentriert ausrichten */
-  min-height: 100vh;        /* Ganze Bildschirmhöhe */
-  background-color: #0f172a; /* Konsistent mit Body */
+  min-width: 100vw;         /* Die App soll die volle Bildschirmbreite einnehmen */
+  text-align: center;       /* Zentriert alle Texte und Inhalte standardmäßig */
+  min-height: 100vh;        /* Die App soll mindestens die Höhe des Bildschirms einnehmen */
+  background-color: #0f172a; /* Gleicher Hintergrund wie im <body>, für einheitliches Design */
 }
