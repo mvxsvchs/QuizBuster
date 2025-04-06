@@ -26,8 +26,9 @@ const Login: React.FC = () => {
             });
 
             if (response.status === 200) {
-                // Token speichern (optional, z.B. für Auth später)
+                // 🟢 Token & Username speichern
                 localStorage.setItem("token", response.data.access_token);
+                localStorage.setItem("username", username); // Username zusätzlich speichern
                 navigate("/start");
             }
         } catch (err: any) {
