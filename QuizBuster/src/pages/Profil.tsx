@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Profil.css";
 
 interface Achievement {
-    id: number;
+    achievement_id: number;
     name: string;
     description: string;
 }
@@ -27,7 +27,7 @@ const Profile = () => {
             headers: { Authorization: `Bearer ${token}` },
         })
             .then((res) => res.json())
-            .then((data) => setUnlockedIds(data.map((a: any) => a.id)));
+            .then((data) => setUnlockedIds(data.map((achievement: any) => achievement.achievement_id)));
     }, [token]);
 
     return (
@@ -37,7 +37,7 @@ const Profile = () => {
 
             <div className="achievement-list">
                 {allAchievements.map((a) => {
-                    const unlocked = unlockedIds.includes(a.id);
+                    const unlocked = unlockedIds.includes(a.achievement_id);
                     return (
                         <div
                             key={a.id}

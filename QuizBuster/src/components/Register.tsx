@@ -39,7 +39,7 @@ const RegisterPage: React.FC = () => {
                 if (err.response && err.response.data?.detail) {
                     setError(err.response.data.detail);
                 } else {
-                    setError("Registrierung oder automatischer Login fehlgeschlagen. Bitte versuch es erneut.");
+                    setError("Registrierung fehlgeschlagen. Bitte versuch es erneut.");
                 }
             }
         };
