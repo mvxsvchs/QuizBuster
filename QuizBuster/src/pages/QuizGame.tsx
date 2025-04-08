@@ -23,7 +23,7 @@ interface QuestionResponse {
     incorrect_answers: string[];
 }
 interface Category {
-    id: number;
+    category_id: number;
     name: string;
 }
 
@@ -96,7 +96,7 @@ const QuizGame: React.FC = () => {
 
     const handleCategorySelect = async (category: Category) => {
         setSelectedCategory(category);
-        const res: AxiosResponse<QuestionResponse[]> = await client.get(`question?category=${category.id}`);
+        const res: AxiosResponse<QuestionResponse[]> = await client.get(`question?category=${category.category_id}`);
         const formattedQuestions: Question[] = res.data.map((q) => {
             const allAnswers: AnswerOption[] = [
                 ...q.incorrect_answers.map(ans => ({ text: ans, correct: false })),
