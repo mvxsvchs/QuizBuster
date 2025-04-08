@@ -6,7 +6,7 @@ const Startseite: React.FC = () => {
     return (
         <div className="Startseite">
             {/* Hauptüberschrift */}
-            <h1>Willkommen zu QuizBuster!</h1>
+            <h1>Willkommen zu BrainBusters!</h1>
 
             {/* Kurze Beschreibung unter dem Titel */}
             <p>Teste dein Wissen mit unserem spannenden Quiz.</p>

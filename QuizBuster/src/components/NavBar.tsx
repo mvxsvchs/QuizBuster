@@ -25,7 +25,7 @@ const NavBar: React.FC = () => {
                     to={isLoggedIn ? "/start" : "/"}
                     className="navbar-logo"
                 >
-                    QuizBuster
+                    BrainBusters
                 </Link>
 
                 {/* Menü rechts neben dem Logo */}
