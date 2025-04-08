@@ -208,7 +208,7 @@ const QuizGame: React.FC = () => {
                 <div className="category-select">
                     <h2>Wähle eine Kategorie:</h2>
                     {availableCategories.map((cat) => (
-                        <button key={cat.id} onClick={() => handleCategorySelect(cat)}>
+                        <button key={cat.category_id} onClick={() => handleCategorySelect(cat)}>
                             {cat.name}
                         </button>
                     ))}
