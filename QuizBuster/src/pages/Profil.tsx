@@ -40,7 +40,7 @@ const Profile = () => {
                     const unlocked = unlockedIds.includes(a.achievement_id);
                     return (
                         <div
-                            key={a.id}
+                            key={a.achievement_id}
                             className={`achievement-card ${unlocked ? "unlocked" : "locked"}`}
                         >
                             <span role="img" aria-label="trophy">
